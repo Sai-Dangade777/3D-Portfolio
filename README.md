@@ -25,3 +25,6 @@ npm start
 
  ![Screenshot (90)](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D-Portfolio..png)
  ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img1.png)
+ ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img2.png)
+ ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img3.png)
+ ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img4.png)
