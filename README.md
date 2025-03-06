@@ -28,3 +28,6 @@ npm start
  ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img2.png)
  ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img3.png)
  ![Screenshot](https://github.com/Sai-Dangade777/3D-Portfolio/blob/main/src/assets/3D_portfolio_img4.png)
+
+ DM for queries : 
+ Linkedin : https://www.linkedin.com/in/saiprasad-dangade-1848a7176/
