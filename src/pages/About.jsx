@@ -16,8 +16,8 @@ const About = () => {
       <div className='py-10 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
         <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
-            <div className='block-container w-20 h-20'>
+          {skills.map((skill, index) => (
+            <div className='block-container w-20 h-20' key={index}>
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img
                   src={skill.imageUrl}
@@ -27,45 +27,32 @@ const About = () => {
               </div>
             </div>
           ))}
-
         </div>
       </div>
+      
       <h1 className='head-text'>
         <span className='blue-gradient_text font-semibold drop-shadow'>Services </span>I Offer
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
           Crafting solutions tailored to your needs – explore a range of tailored services designed to elevate your online presence and engage your audience effectively.
-          
-
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-6'>
-            {service.map((service) => (
-              <div key={service.id} className='bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300'>
-
-                <div className='p-4'>
-                  <h3 className='text-xl font-semibold text-gray-800'>{service.name}</h3>
-
-                </div>
-              </div>
-            ))}
-          </div>
-
         </p>
       </div>
+      
+      {/* Fix the nesting issue by moving this outside of the paragraph */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-6'>
+        {service.map((service, index) => (
+          <div key={index} className='bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300'>
+            <div className='p-4'>
+              <h3 className='text-xl font-semibold text-gray-800'>{service.name}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
 
+      <hr className='border-slate-200 mt-10' />
 
-
-
-
-
-
-
-
-
-      <hr className='border-slate-200' />
-
-      <CTA></CTA>
+      <CTA />
       <div className='mt-10 flex gap-4'>
         {socialLinks.map((social) => (
           <a
@@ -84,8 +71,6 @@ const About = () => {
         ))}
       </div>
     </section>
-
-
   )
 }
 
