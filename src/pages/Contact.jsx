@@ -6,6 +6,7 @@ import Loader from '../components/Loader';
 //import { Alert } from "../components";
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
+import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   const formRef = useRef(null);
