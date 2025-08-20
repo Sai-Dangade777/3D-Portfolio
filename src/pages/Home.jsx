@@ -3,6 +3,8 @@ import { useState, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 
+import { incrementVisitorCount, getVisitorCount } from '../utils/visitorCount';
+
 
 import Island from '../models/Island';
 import Sky from '../models/Sky';
@@ -14,6 +16,16 @@ const Home = () => {
 
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [visitorCount, setVisitorCount] = useState(null);
+
+  React.useEffect(() => {
+    async function updateVisitorCount() {
+      await incrementVisitorCount();
+      const count = await getVisitorCount();
+      setVisitorCount(count);
+    }
+    updateVisitorCount();
+  }, []);
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -55,10 +67,16 @@ const Home = () => {
 
 
   return (
-    <section className='w-full h-screen relative'>
-      {  <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-{currentStage && <Homeinfo currentStage={currentStage}/>}
-  </div> }
+      <section className='w-full h-screen relative'>
+        {/* Visitor Count Display */}
+        <div className='absolute top-8 left-0 right-0 z-20 flex items-center justify-center'>
+          <div className='bg-white/80 rounded-lg px-4 py-2 shadow text-black font-semibold'>
+            {visitorCount !== null ? `Total Visitors: ${visitorCount}` : 'Loading visitor count...'}
+          </div>
+        </div>
+        <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+          {currentStage && <Homeinfo currentStage={currentStage}/>}
+        </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{ near: 0.1, far: 1000 }}
