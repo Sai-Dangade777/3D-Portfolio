@@ -191,6 +191,11 @@ body:has(.card[data-color="green"]:hover) {
   flex-shrink: 0;
 }
 
+.home-intro-card {
+  background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+}
+
 .company-logo {
   width: 72px;
   height: 72px;

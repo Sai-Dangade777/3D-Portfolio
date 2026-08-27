@@ -1,5 +1,8 @@
 import React from "react";
 import { BriefcaseBusiness } from "lucide-react";
+import hexawareLogo from "../../Hexaware Technologies.webp";
+import iitAcademyLogo from "../../iitacademy.webp";
+import safeYourWebLogo from "../../SafeYourWeb Infosec Pvt Ltd.webp";
 
 const CompanyLogo = ({ item }) => (
   <div className={`company-logo ${item.logoSrc ? "bg-white" : item.accent}`}>
@@ -17,7 +20,7 @@ const experiences = [
     role: "Associate Software Engineer",
     duration: "Oct 2025 — Present",
     location: "Navi Mumbai, India",
-    logoSrc: null,
+    logoSrc: hexawareLogo,
     accent: "bg-blue-100 text-blue-700",
     details: [
       "Analyzed structured and semi-structured data from enterprise AI evaluation workflows, identifying trends, inconsistencies, anomalies, and quality issues to support data-driven improvements.",
@@ -29,16 +32,15 @@ const experiences = [
   },
   {
     company: "SafeYourWeb Infosec Pvt Ltd",
-    role: "Frontend Developer (Intern)",
+    role: "Software Engineer Intern",
     duration: "Apr 2025 — Jul 2025",
     location: "Remote",
-    logoSrc: null,
+    logoSrc: safeYourWebLogo,
     accent: "bg-amber-100 text-amber-700",
     details: [
-      "Developed responsive, modular React.js components from Figma designs, translating product requirements into reusable UI components and maintaining consistency across different screen sizes.",
+      "Analyzed and prepared candidate and certification data in Excel through data cleaning, filtering and summarization for Power BI reporting.",
       "Integrated REST APIs and the Razorpay payment gateway, supporting end-to-end user flows from signup through payment and ensuring reliable interaction between frontend and backend services.",
-      "Tested and validated 15+ REST APIs using Postman, verifying request/response behavior, data flow, status codes, and integration scenarios while collaborating with backend teams to identify and resolve issues.",
-      "Worked across frontend, API, and application-integration layers, gaining hands-on experience in debugging data flows, validating application behavior, and collaborating within a software-development environment."
+      "Developed Power BI dashboards and visualizations using multiple chart types to analyze structured data and present insights through interactive reports."
     ]
   },
   {
@@ -46,7 +48,7 @@ const experiences = [
     role: "Frontend Developer (Intern)",
     duration: "Feb 2025 — Apr 2025",
     location: "Remote",
-    logoSrc: null,
+    logoSrc: iitAcademyLogo,
     accent: "bg-emerald-100 text-emerald-700",
     details: [
       "Engineered dynamic college listing pages for Engineering & MBBS courses, boosting student engagement by 20%.",
@@ -68,10 +70,12 @@ const Experience = () => {
           >
             <CompanyLogo item={item} />
             <div className="min-w-0 flex-1">
-              <h3 className="text-xl font-semibold">{item.role}</h3>
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                <h3 className="text-xl font-semibold">{item.role}</h3>
+                <span className="shrink-0 text-sm text-gray-600 sm:ml-6 sm:text-right">{item.duration}</span>
+              </div>
               <div className="mb-4 mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600">
                 <span className="font-medium text-slate-700">{item.company}</span>
-                <span>{item.duration}</span>
                 <span>{item.location}</span>
               </div>
               <ul className="ml-5 list-disc text-base text-gray-800">
