@@ -5,12 +5,12 @@ import { arrow } from "../assets/icons";
 const HomeInfo = ({ currentStage }) => {
     if (currentStage === 1)
         return (
-            <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
-                Hey, I'm
-                <span className='font-semibold mx-2 text-white'>Sai 🙋🏻‍♀️</span>
+            <h1 className='home-intro-card mx-auto w-fit max-w-[92vw] -translate-y-10 rounded-lg px-5 py-3 text-center text-sm leading-relaxed text-white sm:max-w-xl sm:-translate-y-14 sm:px-6 sm:text-base sm:leading-snug'>
+                Hi, I'm
+                <span className='font-semibold mx-2 text-white'>Sai</span>
 
                 <br />
-                Software Developer from Pune
+                Data Analyst turning complex data into clear business insights
             </h1>
         );
 

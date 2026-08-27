@@ -11,7 +11,7 @@ const Rate = () => {
             emailjs.send(
                 "service_yvilryj",  // Replace with your EmailJS Service ID
                 "template_n65toxc", // Replace with your EmailJS Template ID
-                { rating: rating, user_email: "saiprasaddangade.sae.comp@gmail.com" }, // Replace with your email
+                { rating: rating, user_email: "saiprasaddangade@gmail.com" }, // Replace with your email
                 "BS3DxbVLHKuCwU_Or"   // Replace with your EmailJS Public Key
             ).then(() => {
                 alert("Thanks for your feedback!");
